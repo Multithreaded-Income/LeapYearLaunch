@@ -1,16 +1,134 @@
 ---
-
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap Year Launch</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-900 antialiased font-body pb-10">
+    <Hero />
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
+        The universe has gifted you an extra day this year. Use it to launch
+        something new.
+      </h2>
+      <div class="text-lg text-center mb-8">
+        <p>
+          Did you have a new years resolution to do something new this year?
+        </p>
+
+        <p>Maybe launch a new course? Launch your FIRST course?</p>
+
+        <p>
+          Maybe you wanted to start a YouTube channel, and start talking about
+          all the topics you discuss with yourself in the shower?
+        </p>
+
+        <p>
+          Have you been toying around with your idea for a new "Facebook for
+          People Who Love Poodles" app?
+        </p>
+      </div>
+      <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
+        The First Step Is The Hardest
+      </h2>
+      <div class="text-lg text-center mb-8">
+        <p>What's stopping you from starting any of these ideas?</p>
+        <p>
+          It could be FEAR. It's a lot of work to start something new. It's
+          daunting to think about the shear amount of time and effort necessary
+          to build something new.
+        </p>
+        <p>It could be TIME.</p>
+        <p>LACK OF KNOWLEDGE.</p>
+      </div>
+      <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
+        Take the Leap Year Launch Challenge
+      </h2>
+      <div class="text-lg text-center mb-8">
+        <p>
+          I challenge you to use this extra day to take the first step towards
+          launching your new idea.
+        </p>
+        <p>
+          It doesn't have to be a big step. It could be as simple as writing
+          down your idea on a piece of paper.
+        </p>
+        <p>
+          It could be as simple as creating a new folder on your computer to
+          store all the files for your new project.
+        </p>
+        <p>
+          It could be as simple as writing a single line of code for your new
+          app.
+        </p>
+        <p>
+          It could be as simple as recording a 30 second video of yourself
+          talking about your new YouTube channel.
+        </p>
+        <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
+          Join Us!
+        </h2>
+        <div
+          class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 w-1/2 mx-auto"
+          role="alert"
+        >
+          <p class="font-bold">Sign up for Email Updates</p>
+          <div class="mt-2">
+            <form id="email-signup-form">
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your email"
+                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-3/4"
+                required
+              />
+              <button
+                type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2"
+                >Sign Up</button
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+      <Footer />
+
+      <!-- Bento script -->
+      <script
+        is:inline
+        src="https://app.bentonow.com/ba0d0b8f1c7fbe56a65d6ad6bb91e6c4.js"
+        defer
+        async></script>
+      <script is:inline>
+        window.addEventListener("bento:ready", function () {
+          if (typeof bento$ != "undefined") {
+            bento$(function () {
+              // bento.showChat();
+              // bento.updateFields({"name": "User 1"});
+              // bento.identify("example@example.com");
+              bento.view();
+
+              // Add this code to handle the form submission
+              document
+                .getElementById("email-signup-form")
+                .addEventListener("submit", function (e) {
+                  e.preventDefault();
+                  var email = document.getElementById("email-input").value;
+                  bento.identify(email);
+                });
+            });
+          }
+        });
+      </script>
+    </div>
+  </body>
+ </html>
