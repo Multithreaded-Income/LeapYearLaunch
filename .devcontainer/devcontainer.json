@@ -3,14 +3,15 @@
 {
 	"name": "Alpine",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.19",
-	"features": {
-		"ghcr.io/astronomer/devcontainer-features/astro-cli:1": {}
-	},
-	"customizations": {
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+	"features": {	
+
+	},	
+		"customizations": {
 		"vscode": {
 			"extensions": [
-				"astro-build.astro-vscode"
+				"astro-build.astro-vscode",
+				"GitHub.copilot"
 			]
 		}
 	}
