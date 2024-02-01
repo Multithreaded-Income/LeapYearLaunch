@@ -74,11 +74,8 @@ import Footer from "../components/Footer.astro";
           It could be as simple as recording a 30 second video of yourself
           talking about your new YouTube channel.
         </p>
-        <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
-          Join Us!
-        </h2>
         <div
-          class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 w-1/2 mx-auto"
+          class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3 w-full sm:w-1/2 sm:px-8 mx-auto"
           role="alert"
         >
           <p class="font-bold">Sign up for Email Updates</p>
@@ -88,7 +85,7 @@ import Footer from "../components/Footer.astro";
                 type="email"
                 id="email-input"
                 placeholder="Enter your email"
-                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-3/4"
+                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-full sm:w-3/4"
                 required
               />
               <button
@@ -97,6 +94,24 @@ import Footer from "../components/Footer.astro";
                 >Sign Up</button
               >
             </form>
+          </div>
+          <!-- Add this section where you want the Discord invite to appear -->
+          <div class="text-lg text-center mb-8 mt-2">
+            <h2 class="text-3xl font-micro font-semibold mb-4 text-center mt-8">
+              Join Our Discord Community!
+            </h2>
+            <p>
+              We invite you to join our Multithreaded Income Discord! Let us
+              support you in your challenge. Share your progress, ask for help,
+              and get feedback from others.
+            </p>
+            <a
+              href="https://mti.to/discord"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-2"
+              target="_blank"
+            >
+              Join Discord
+            </a>
           </div>
         </div>
       </div>
@@ -131,4 +146,4 @@ import Footer from "../components/Footer.astro";
       </script>
     </div>
   </body>
- </html>
+</html>
